@@ -42,7 +42,7 @@ client.connect((err) => {
   });
 
   //single data read
-  app.get("/product/:key", (req, res) => {
+  app.get("/products/:key", (req, res) => {
     productsCollection
       .find({key : req.params.key})
       .toArray((err, docs) => {
